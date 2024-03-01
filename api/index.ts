@@ -72,7 +72,6 @@ app.post("/contact", function(req, res){
     }
 
   })
-  
   var mailOption = {
       form:'shivam.srtech@gmail.com',
       to: 'shivam.srtech@gmail.com',
@@ -132,7 +131,17 @@ app.post("/post", function(req, res){
     }
 
   })
-
+  var mailOptionComment = {
+      form:'shivam.srtech@gmail.com',
+      to: 'shivam.srtech@gmail.com',
+      cc: 'shivam.srtech@gmail.com',
+      subject: 'New comment from ' + ' ' +  userComment,
+      html: ` <h2>New comment form ${userComment}</h2>
+              <h4> Name</h4> <p> ${userComment}</p>
+              <h4> Comment Message</h4> <p> ${comment}</p>
+              <h4> Email</h4> <p> ${commentEmail}</p>
+              <h4> User Website </h4> <p> <a href='${website}'>${website}</a></p>`
+  };
   var mailOptionUserComment ={
       from: 'shivam.srtech@gmail.com',
       to: req.body.commentEmail,
