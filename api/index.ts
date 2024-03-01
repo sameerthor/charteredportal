@@ -15,7 +15,7 @@ const connectDB = require('../server/config/db');
 const { isActiveRoute } = require('../server/helpers/routeHelpers');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
   
 // Connect to DB
 connectDB();
@@ -40,7 +40,7 @@ app.use('/public/',express.static(path.join('../public/')));
 
 // Templating Engine
 app.use(expressLayout);
-app.set('layout', path.resolve('../views/layouts/main'));
+app.set('layout', path.resolve('./views/layouts/main'));
 app.set('view engine', 'ejs');
 
 
