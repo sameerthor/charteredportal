@@ -1,12 +1,10 @@
 {
-  "name": "nodejs-blog",
+  "name": "new-express-project",
   "version": "1.0.0",
-  "description": "![alt text](/readme-image.jpg?raw=true)",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js",
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -27,8 +25,5 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.9",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
   }
 }
