@@ -40,7 +40,7 @@ app.use('/public',express.static(path.join(__dirname, "public")));
 
 // Templating Engine
 app.use(expressLayout);
-app.set('layout', path.resolve('./views/layouts/main'));
+app.set('layout',path.join(__dirname, "views/layouts/main")); 
 app.set('view engine', 'ejs');
 
 
