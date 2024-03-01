@@ -4,7 +4,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const multer = require('multer');
 const bodyparser = require('body-parser');
-const expressLayout = require('express-ejs-layouts');
+//const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -39,7 +39,7 @@ app.use('/public',express.static(path.join(__dirname, "public")));
 
 
 // Templating Engine
-app.use(expressLayout);
+//app.use(expressLayout);
 app.set('layout',path.join(__dirname, "/views/layouts/main")); 
 app.set('view engine', 'ejs');
 
