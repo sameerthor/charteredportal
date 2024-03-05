@@ -1,3 +1,20 @@
+<head>
+  <script src="https://cdn.tiny.cloud/1/mvkqn369dw7k4gc9206ay425577gyz5ven0euaj5a0cfssxm/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ],
+      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+    });
+  </script>
+</head>
 <a href="/dashboard">&larr; Back</a>
 <div class="admin-title">
   <h2 class="text-center">Add New Post</h2>
@@ -10,10 +27,6 @@
 
   <label for="body"><b>Content</b></label>
   <textarea name="body" cols="50" rows="10" class="postContent"></textarea>
-
-  <!-- <label for="body"><b>Upload Image</b></label>
-  <input type="file" name="image" required> -->
-
   <input type="submit" value="Submit Post" class="btn postBtn">
 
 </form>

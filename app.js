@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const multer = require('multer');
-const bodyparser = require('body-parser');
+const bodyParser = require('body-parser');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
@@ -21,6 +21,7 @@ const PORT = process.env.PORT || 4000;
 connectDB();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
@@ -34,9 +35,6 @@ app.use(session({
   }),
   
 }));
-
-
-
 
 // Templating Engine
 app.use(expressLayout);
@@ -174,9 +172,6 @@ app.post("/post", function(req, res){
       }
   })
 });
-
-
-
 
 
 app.listen(PORT, ()=> {
